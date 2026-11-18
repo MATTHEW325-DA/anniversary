@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6f9c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Us 💕" />
+  <title>Through the Storms 🌧️</title>
+  <meta name="description" content="The hardships we faced — and survived together." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-two">
+
+  <div class="inapp-banner" id="inappBanner" hidden>
+    💡 Open this link in Safari or Chrome — the music won't play in Instagram 💕
+  </div>
+
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="index.html">💗 The Beginning</a>
+      <a href="hardship.html" class="active">🌧️ The Storms</a>
+      <a href="strong.html">💪 Still Strong</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-header">
+      <p class="eyebrow">Chapter Two</p>
+      <h1>Not Every Day Was Sunny</h1>
+      <p class="subtitle">
+        Real love isn't about avoiding the storm — it's about dancing in the rain together.
+        Here are the moments that tested us… and made us unbreakable.
+      </p>
+    </section>
+
+    <section class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>The First Big Fight</h3>
+          <figure class="timeline-figure">
+            <img
+              src="images/03-the-hard-week.jpg"
+              alt="The week we made it through"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div class="photo-fallback">💕 Add images/03-the-hard-week.jpg</div>
+          </figure>
+          <p>
+            We didn't talk for a whole day. It felt like the world stopped.
+            But when we finally came back to each other, I knew — we were worth fighting for.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>The Distance</h3>
+          <figure class="timeline-figure">
+            <img
+              src="images/04-the-distance.jpg"
+              alt="Same moon, different cities"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div class="photo-fallback">💕 Add images/04-the-distance.jpg</div>
+          </figure>
+          <p>
+            Miles apart, same moon. Every "goodnight" over a screen hurt a little.
+            But every "good morning" reminded me you were still mine.
+          </p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>The Hard Days</h3>
+          <figure class="timeline-figure">
+            <img
+              src="images/05-the-comeback.jpg"
+              alt="When we chose each other again"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div class="photo-fallback">💕 Add images/05-the-comeback.jpg</div>
+          </figure>
+          <p>
+            When life got heavy and you felt like giving up — I held on tighter.
+            You didn't have to carry it alone. That's what love is.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="flip-section">
+      <h2>Reasons I Chose to Stay 💖</h2>
+      <p class="flip-hint">(Tap each card — there's a message inside)</p>
+      <div class="flip-grid">
+        <button class="flip-card" aria-label="Flip card for reason 1">
+          <div class="flip-inner">
+            <div class="flip-front">1</div>
+            <div class="flip-back">Because your laugh is my favorite sound.</div>
+          </div>
+        </button>
+        <button class="flip-card" aria-label="Flip card for reason 2">
+          <div class="flip-inner">
+            <div class="flip-front">2</div>
+            <div class="flip-back">Because you make ordinary days feel magical.</div>
+          </div>
+        </button>
+        <button class="flip-card" aria-label="Flip card for reason 3">
+          <div class="flip-inner">
+            <div class="flip-front">3</div>
+            <div class="flip-back">Because even when it's hard, you're my home.</div>
+          </div>
+        </button>
+        <button class="flip-card" aria-label="Flip card for reason 4">
+          <div class="flip-inner">
+            <div class="flip-front">4</div>
+            <div class="flip-back">Because I can't imagine a world without you in it.</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <div class="nav-actions">
+      <a href="index.html" class="back-btn">← Back</a>
+      <a href="strong.html" class="next-btn">Continue →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Still choosing you. Always. 💕</p>
+  </footer>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button
+    id="music-toggle"
+    class="music-toggle"
+    aria-label="Toggle background music"
+    aria-pressed="false"
+    title="Play music"
+  >
+    <span class="music-icon">🔇</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

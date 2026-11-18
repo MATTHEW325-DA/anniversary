@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6f9c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Us 💕" />
+  <title>Our Story Begins 💕</title>
+  <meta name="description" content="The day our forever started." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-one">
+
+  <div class="inapp-banner" id="inappBanner" hidden>
+    💡 Open this link in Safari or Chrome — the music won't play in Instagram 💕
+  </div>
+
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="index.html" class="active">💗 The Beginning</a>
+      <a href="hardship.html">🌧️ The Storms</a>
+      <a href="strong.html">💪 Still Strong</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Chapter One</p>
+      <h1>Where It All Began</h1>
+      <p class="subtitle">
+        Every love story is beautiful, but ours is my favorite.
+        This is the day my world got a little brighter — the day I met you.
+      </p>
+      <p class="music-note">🎵 Turn your volume up — this song is ours.</p>
+
+      <figure class="photo-feature">
+        <img
+          src="images/01-the-first-hello.jpg"
+          alt="The day we first met"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 Add images/01-the-first-hello.jpg</div>
+        <figcaption class="photo-caption">The day it all started 💕</figcaption>
+      </figure>
+
+      <div class="date-badge">
+        <span class="date-label">Our Anniversary</span>
+        <span class="date-value" id="anniversary-date">— 💕 —</span>
+      </div>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><span id="days">0</span><small>days</small></div>
+        <div><span id="hours">0</span><small>hours</small></div>
+        <div><span id="mins">0</span><small>mins</small></div>
+        <div><span id="secs">0</span><small>secs</small></div>
+      </div>
+
+      <figure class="photo-feature">
+        <img
+          src="images/02-first-date.jpg"
+          alt="Our first date"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 Add images/02-first-date.jpg</div>
+        <figcaption class="photo-caption">Our first date — I was so nervous</figcaption>
+      </figure>
+
+      <button class="surprise-btn" id="letterBtn">💌 Open My Love Letter</button>
+
+      <div class="love-letter" id="loveLetter" hidden>
+        <div class="letter-inner">
+          <h2>To My Favorite Person,</h2>
+          <p>
+            From the very first moment, you felt like home. I didn't know it then,
+            but you were about to become my whole world. Thank you for every laugh,
+            every late-night talk, every silly argument that ended in a hug.
+          </p>
+          <p>
+            This page is just the start. Keep going — there's more I want to say. 💗
+          </p>
+          <p class="signature">— Forever yours</p>
+        </div>
+      </div>
+
+      <a href="hardship.html" class="next-btn">Continue Our Story →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made with 💖 just for you.</p>
+  </footer>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button
+    id="music-toggle"
+    class="music-toggle"
+    aria-label="Toggle background music"
+    aria-pressed="false"
+    title="Play music"
+  >
+    <span class="music-icon">🔇</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

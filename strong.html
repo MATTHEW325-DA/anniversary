@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6f9c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Us 💕" />
+  <title>Still Going Strong 💪💕</title>
+  <meta name="description" content="Here's to us — and every tomorrow." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-three">
+
+  <div class="inapp-banner" id="inappBanner" hidden>
+    💡 Open this link in Safari or Chrome — the music won't play in Instagram 💕
+  </div>
+
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="index.html">💗 The Beginning</a>
+      <a href="hardship.html">🌧️ The Storms</a>
+      <a href="strong.html" class="active">💪 Still Strong</a>
+    </nav>
+  </header>
+
+  <main class="final-hero">
+    <p class="eyebrow">Chapter Three</p>
+    <h1>And Here We Are</h1>
+    <p class="subtitle">
+      Still together. Still laughing. Still choosing each other every single day.
+      Not because it's easy — but because it's <em>us</em>.
+    </p>
+
+    <section class="photo-grid" aria-label="Our favorite moments">
+      <figure>
+        <img
+          src="images/06-us-now.jpg"
+          alt="Us now"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 06-us-now.jpg</div>
+        <figcaption>Still here 💪</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="images/07-that-laugh.jpg"
+          alt="Your laugh"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 07-that-laugh.jpg</div>
+        <figcaption>My favorite sound</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="images/08-us-being-us.jpg"
+          alt="Us being us"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 08-us-being-us.jpg</div>
+        <figcaption>No one else I'd rather be weird with</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="images/09-my-favorite-person.jpg"
+          alt="My favorite person"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="photo-fallback">💕 09-my-favorite-person.jpg</div>
+        <figcaption>You. Just... you. 💗</figcaption>
+      </figure>
+    </section>
+
+    <button class="reveal-btn" id="revealBtn">🎁 One Last Surprise…</button>
+
+    <div class="final-message" id="finalMessage" hidden>
+      <div class="final-inner">
+        <h2>My Promise to You</h2>
+        <p>
+          No matter how many storms come, I'll keep choosing you.
+          For the good days and the messy ones.
+          For the quiet mornings and the loud laughs.
+          <strong>Happy Anniversary, my love.</strong>
+        </p>
+        <p class="big-heart">💖</p>
+        <p class="signature">— Yours, always</p>
+      </div>
+    </div>
+
+    <!-- ===== Our Next Destination — HIDDEN until tapped ===== -->
+    <button class="reveal-btn next-dest-btn" id="nextDestBtn">
+      💍 Our Next Destination…
+    </button>
+
+    <section class="next-destination" id="nextDestination" hidden>
+      <div class="ring-wrap">
+        <img
+          src="images/wedding-ring.png"
+          alt="A wedding ring — a promise of forever"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="ring-fallback">💍</div>
+      </div>
+
+      <p class="eyebrow" style="margin-top: 1.5rem;">Our Next Destination</p>
+      <h2 class="next-destination-title">Forever</h2>
+      <p class="next-destination-text">
+        Every road we've walked has led us here. Every storm we weathered
+        made us stronger. And now — I want to walk the rest of my life
+        beside you.
+      </p>
+      <p class="next-destination-tagline">Will you keep choosing me? 💍</p>
+
+      <div class="sparkle-row" aria-hidden="true">
+        <span>✨</span><span>💍</span><span>✨</span>
+      </div>
+    </section>
+
+    <button class="celebrate-btn" id="celebrateBtn">🎉 Celebrate Us!</button>
+
+    <div class="nav-actions">
+      <a href="hardship.html" class="back-btn">← Back</a>
+      <a href="index.html" class="next-btn">Start Again 💕</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>To many more anniversaries. 💕</p>
+  </footer>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button
+    id="music-toggle"
+    class="music-toggle"
+    aria-label="Toggle background music"
+    aria-pressed="false"
+    title="Play music"
+  >
+    <span class="music-icon">🔇</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
