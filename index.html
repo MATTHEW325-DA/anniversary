@@ -109,5 +109,86 @@
   </button>
 
   <script src="script.js"></script>
+
+  <!-- Failsafe inline script so the page works even if script.js is missing/broken -->
+  <script>
+  (function () {
+    "use strict";
+
+    // ----- Love letter toggle -----
+    var letterBtn = document.getElementById("letterBtn");
+    var loveLetter = document.getElementById("loveLetter");
+
+    if (letterBtn && loveLetter) {
+      letterBtn.addEventListener("click", function () {
+        var isHidden = loveLetter.hasAttribute("hidden");
+        if (isHidden) {
+          loveLetter.removeAttribute("hidden");
+          letterBtn.textContent = "💌 Close My Love Letter";
+        } else {
+          loveLetter.setAttribute("hidden", "");
+          letterBtn.textContent = "💌 Open My Love Letter";
+        }
+      });
+    }
+
+    // ----- Music toggle -----
+    var audio = document.getElementById("bg-music");
+    var musicBtn = document.getElementById("music-toggle");
+    var icon = musicBtn ? musicBtn.querySelector(".music-icon") : null;
+
+    function setMusicState(playing) {
+      if (musicBtn) {
+        musicBtn.setAttribute("aria-pressed", playing ? "true" : "false");
+        musicBtn.title = playing ? "Pause music" : "Play music";
+        musicBtn.classList.toggle("playing", playing);
+      }
+      if (icon) icon.textContent = playing ? "🎵" : "🔇";
+    }
+
+    function playMusic() {
+      if (!audio) return;
+      var p = audio.play();
+      if (p && typeof p.then === "function") {
+        p.then(function () { setMusicState(true); })
+         .catch(function () { setMusicState(false); });
+      } else {
+        setMusicState(!audio.paused);
+      }
+    }
+
+    function pauseMusic() {
+      if (!audio) return;
+      audio.pause();
+      setMusicState(false);
+    }
+
+    if (musicBtn && audio) {
+      musicBtn.addEventListener("click", function () {
+        if (audio.paused) {
+          playMusic();
+        } else {
+          pauseMusic();
+        }
+      });
+
+      // Try autoplay; if blocked, the first user interaction starts it.
+      playMusic();
+
+      var startOnFirstGesture = function () {
+        if (audio.paused) playMusic();
+        document.removeEventListener("click", startOnFirstGesture);
+        document.removeEventListener("touchstart", startOnFirstGesture);
+        document.removeEventListener("keydown", startOnFirstGesture);
+      };
+      document.addEventListener("click", startOnFirstGesture);
+      document.addEventListener("touchstart", startOnFirstGesture);
+      document.addEventListener("keydown", startOnFirstGesture);
+
+      audio.addEventListener("play", function () { setMusicState(true); });
+      audio.addEventListener("pause", function () { setMusicState(false); });
+    }
+  })();
+  </script>
 </body>
 </html>
